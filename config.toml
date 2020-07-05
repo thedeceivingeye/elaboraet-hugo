@@ -1,44 +1,67 @@
-baseurl = "/"
-title = "Elaboraet"
+# REMOVE THIS
+themesDir = "../../" 
+
+# DO NOT REMOVE THIS
+theme = "codex" 
+
+# Override these settings with your own
+title = "elaboraet"
 languageCode = "en-us"
-paginate = "10" # Number of posts per page
-theme = "mainroad"
+baseURL = "https://elaboraet.com/"
+copyright = "© {year}"
 
-[Author] # Used in authorbox
-  name = "Umit"
-  bio = "Head writer."
-  avatar = "img/avatar.png"
+# Add your Disqus shortname here.
+# disqusShortname = ""
 
-[Params]
-  subtitle = "" # Deprecated in favor of .Site.Params.logo.subtitle
-  description = "[description]" # Site description. Used in meta description
-  #opengraph = true # Enable OpenGraph if true
-  #schema = true # Enable Schema
-  readmore = false # Show "Read more" button in list if true
-  authorbox = true # Show authorbox at bottom of pages if true
-  toc = true # Enable Table of Contents
-  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
-  post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
-  mainSections = ["posts", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
-  dateformat = "2006-01-02" # Change the format of dates
-  highlightColor = "#e22d30" # Override highlight color
-  #customCSS = ["css/custom.css"] # Include custom CSS files
-  #customJS = ["js/custom.js"] # Include custom JS files
+# Add your Google Analytics identifier: UA-XXXXXXXX-X
+# googleAnalytics = "" 
 
-[Params.logo]
-  image = "book.png" # Logo image. Path relative to "static"
-  #title = "Mainroad" # Logo title, otherwise will use site title
-  subtitle = "writing, books, and reference" # Logo subtitle
+# Optional params
+[params]
+  # Follow the Hugo date/time format reference here: 
+  # https://gohugo.io/functions/format/#gos-layout-string
+  dateFormat = "Jan 2 2006"
 
-[Params.sidebar]
-  home = "right" # Configure layout for home page
-  list = "left"  # Configure layout for list pages
-  single = false # Configure layout for single pages
-  # Enable widgets in given order
-  widgets = ["ddg-search", "recent", "categories", "taglist", "languages"]
-  # alternatively "ddg-search" can be used, to search via DuckDuckGo
-  # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
+  # Links to your social accounts, comment/uncomment as needed. Icons will be displayed for those specified.
+  #twitter = "https://twitter.com/<your handle>"
+  #github = "https://github.com/<your handle>"
+   email = "mailto:elaboraet@gmail.com"
+  # facebook = "https://facebook.com/<your handle>"
+  # gitlab = "https://gitlab.com/<your handle>"
+  # instagram = "https://instagram.com/<your handle>"
+  # linkedin = "<link to your profile>"
+  # youtube = "https://www.youtube.com/channel/<your channel>"
+  
+  # Titles for your icons (shown as tooltips), and also their display order.
+  # Currently, these icons are supported: 
+  #   "Twitter", "GitHub", "Email", "Facebook", "GitLab", "Instagram", "LinkedIn", "YouTube"
+  #iconTitles = ["Twitter", "GitHub"]
+  iconTitles = ["Email"]
 
-[Params.widgets]
-  recent_num = 5 # Set the number of articles in the "Recent articles" widget
-  tags_counter = false # Enable counter for each tag in "Tags" widget
+# This disables Hugo's default syntax highlighting in favor
+# of prismjs. If you wish to use Hugo's default syntax highlighting
+# over prismjs, remove this. You will also need to remove the prismjs
+# vendor script in layouts/blog/single.html.
+[markup]
+  [markup.highlight]
+    codeFences = false
+    
+  # Set to false to disallow raw HTML in markdown files
+  [markup.goldmark.renderer]
+      unsafe = true
+
+# Controls the navigation
+[[menu.main]]
+  identifier = "about"
+  name = "about"
+  title = "About"
+  url = "/"
+
+[[menu.main]]
+  identifier = "writing"
+  name = "writing"
+  title = "Writing"
+  url = "/writing"
+
+
+

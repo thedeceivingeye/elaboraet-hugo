@@ -1,13 +1,12 @@
-# REMOVE THIS
-themesDir = "../../" 
+
 
 # DO NOT REMOVE THIS
-theme = "codex" 
+theme = "hugo-theme-codex" 
 
 # Override these settings with your own
 title = "elaboraet"
 languageCode = "en-us"
-baseURL = "https://elaboraet.com/"
+baseURL = "/"
 copyright = "© {year}"
 
 # Add your Disqus shortname here.
